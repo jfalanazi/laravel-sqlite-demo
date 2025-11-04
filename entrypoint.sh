@@ -18,4 +18,4 @@ fi
 php artisan migrate --force || true
 
 # تشغيل السيرفر المدمج
-php -S 0.0.0.0:${PORT} -t public
+php -S 0.0.0.0:${PORT} -t public server.php
