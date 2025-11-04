@@ -23,3 +23,5 @@ php artisan migrate --force || true
 
 # شغّل السيرفر مع الراوتر المخصص
 php -S 0.0.0.0:${PORT} router.php
+php artisan config:cache || true
+php artisan route:cache || true
