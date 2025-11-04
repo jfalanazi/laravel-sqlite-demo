@@ -15,3 +15,18 @@ Route::get('/ping', function () {
     }
     return "ok, users=" . User::count();
 });
+
+
+
+
+Route::get('/test-write', function () {
+    \App\Models\User::firstOrCreate(
+        ['email' => 'demo@example.com'],
+        ['name' => 'Demo', 'password' => bcrypt('Password123!')]
+    );
+    return 'wrote';
+});
+
+Route::get('/test-count', function () {
+    return 'users=' . \App\Models\User::count();
+});
