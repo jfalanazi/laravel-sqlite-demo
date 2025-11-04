@@ -13,7 +13,7 @@ services:
         value: sqlite
       - key: DB_DATABASE
         value: /var/data/sqlite/database.sqlite
-    disks:
+    persistentDisks:
       - name: data
         mountPath: /var/data
         sizeGB: 1
